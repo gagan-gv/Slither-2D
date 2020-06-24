@@ -31,7 +31,7 @@ def myquit():
     pygame.quit()
     sys.exit(0)
 
-font = pygame.font.SysFont(None, 25, bold=True)
+font = pygame.font.SysFont(None, 50, bold=True, italic = True)
 font1 = pygame.font.SysFont(None, 30, bold=True, italic = True)
 
 def drawGrid():
@@ -67,7 +67,7 @@ def gameLoop():
     while not gameExit:
         while gameOver == True:
             gameDisplay.blit(bg, (0, 0))
-            message_to_screen("Game over, press p to play again or Q to quit", red)
+            message_to_screen("Game over, press p to play again or Q to quit", white)
             pygame.display.update()
 
             for event in pygame.event.get():
@@ -144,7 +144,7 @@ def gameLoop():
                 snakeLength += 1
         speed = FPS + (snakeLength-1)/5
         score="Score: " + str((snakeLength-1)*10)+ "  "
-        message(score + "   Speed: " + str(speed/5)+"X",white)
+        message(score + "   Speed: " + str(round(speed/5,2))+"X",white)
         pygame.display.update()
         clock.tick(speed)
         
