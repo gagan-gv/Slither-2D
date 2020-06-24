@@ -139,8 +139,8 @@ def gameLoop():
         pygame.display.update()
         if lead_x >= randomAppleX and lead_x <= randomAppleX + AppleThickness:
             if lead_y >= randomAppleY and lead_y <= randomAppleY + AppleThickness:
-                randomAppleX = round(random.randrange(0, window_width-blockSize)/10.0)*10.0#second or more apple generation
-                randomAppleY = round(random.randrange(0, window_height-blockSize-25)/10.0)*10.0#second or more apple generation
+                randomAppleX = round(random.randrange(0, window_width-blockSize)/10.0)*10.0#second or later apple generation
+                randomAppleY = round(random.randrange(0, window_height-blockSize-25)/10.0)*10.0#second or later apple generation
                 snakeLength += 1
         speed = FPS + (snakeLength-1)/5
         score="Score: " + str((snakeLength-1)*10)+ "  "
