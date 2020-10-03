@@ -5,14 +5,9 @@ import random
 #live update of score & speed also speed increases with increase in snake length
 pygame.init()
 custom_red = (255,18,44)
-desert_sand = (237,201,175)
 red = (255,0,0)
-cyber_yellow = (255,211,0)
-chocolate_cosmos = (92,20,36)
-english_red = (159,69,75)
 white = (255,255,255)
 green = (50,90,50)
-black = (0,0,0)
 window_width = 1200
 window_height = 700
 
